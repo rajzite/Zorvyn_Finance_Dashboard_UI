@@ -134,3 +134,206 @@ code {
   background: var(--code-bg);
 }
 
+/* 🧊 Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.dark .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* 🚀 Hover Lift */
+.hover-lift {
+  transition: all 0.25s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-border);
+}
+
+/* 🎯 Buttons */
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: var(--bg-soft);
+}
+
+/* 🧾 Inputs */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+  font-size: 14px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-bg);
+}
+
+/* 📊 Stat Colors */
+.text-income {
+  color: var(--success);
+}
+.text-expense {
+  color: var(--danger);
+}
+.text-balance {
+  color: var(--accent);
+}
+
+/* 📦 Grid Helpers */
+.grid-auto {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .grid-auto {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-auto {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 🧭 Sidebar polish */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text);
+  transition: all 0.2s;
+}
+
+.sidebar-link:hover {
+  background: var(--bg-soft);
+}
+
+.sidebar-active {
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* 🎛 Toggle */
+.toggle {
+  width: 44px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--border);
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-circle {
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.25s;
+}
+
+.toggle.active .toggle-circle {
+  transform: translateX(22px);
+}
+
+/* 🔥 Premium UI Enhancements */
+
+.glass-card {
+  @apply bg-white/60 dark:bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl shadow-soft;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg;
+}
+
+.input {
+  @apply p-2 rounded-lg bg-white/70 dark:bg-slate-800 border border-white/10 focus:ring-2 focus:ring-primary outline-none;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-4 py-2 rounded-xl hover:scale-105 active:scale-95 transition;
+}
+
+.btn-secondary {
+  @apply px-4 py-2 rounded-xl border border-white/10 hover:bg-white/10 transition;
+}
+
+/* 🌈 Theme Toggle */
+.theme-toggle {
+  @apply relative w-12 h-6 rounded-full cursor-pointer
+         bg-gradient-to-r from-slate-300 to-slate-400
+         dark:from-slate-700 dark:to-slate-600
+         transition-all duration-300;
+}
+
+.theme-toggle-circle {
+  @apply absolute top-1 left-1 w-4 h-4 bg-white rounded-full shadow-md
+         transition-all duration-300;
+}
+
+.theme-toggle.active .theme-toggle-circle {
+  @apply translate-x-6;
+}
+
+/* 🌟 Header */
+.header {
+  @apply h-16 flex items-center justify-between px-8
+         bg-white/50 dark:bg-white/5
+         backdrop-blur-xl border-b border-white/10;
+}
+
+.header-title {
+  @apply text-lg font-semibold tracking-tight capitalize;
+}
+
+/* 🎛 Role Selector */
+.role-select {
+  @apply px-3 py-1.5 rounded-lg text-sm
+         bg-white/70 dark:bg-white/10
+         border border-white/10
+         focus:outline-none focus:ring-2 focus:ring-primary/40;
+}

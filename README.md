@@ -1,75 +1,132 @@
-# React + TypeScript + Vite
+# 💰 Zorvyn — Personal Finance Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and visually polished Finance Dashboard built using React, TypeScript, and Tailwind CSS.
+Designed to simulate real-world fintech UI/UX with clean architecture and scalable frontend practices.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+👉 https://finance-dashboard-eight-rust.vercel.app
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## 📌 Features
 
-## Expanding the ESLint configuration
+### 📊 Dashboard Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Total Balance, Income, Expenses summary cards
+* Balance trend visualization (Line Chart)
+* Expense breakdown (Pie Chart)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 💳 Transactions
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* View transactions with:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  * Date
+  * Category
+  * Amount
+  * Type (Income / Expense)
+* Features:
+
+  * Search by category
+  * Filter by type
+  * Sort by date / amount
+* Admin can add/delete transactions
+
+### 👤 Role-Based UI (Frontend Simulation)
+
+* **Admin**
+
+  * Add/Delete transactions
+* **Viewer**
+
+  * Read-only access
+* Role switch available in UI
+
+### 🧠 Insights
+
+* Highest spending category
+* Savings rate calculation
+* Smart observation based on spending
+
+### 🎨 UI/UX Highlights
+
+* Modern fintech-inspired design
+* Glassmorphism + gradient cards
+* Smooth hover interactions
+* Clean typography & spacing
+* Fully responsive (mobile/tablet/desktop)
+* Dark mode support
+
+### 💾 State Management
+
+* Zustand for global state
+* LocalStorage persistence
+
+---
+
+## 🛠 Tech Stack
+
+* React + Vite
+* TypeScript
+* Tailwind CSS
+* Zustand
+* Recharts
+* Framer Motion
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/
+ ├── features/
+ │   ├── dashboard/
+ │   ├── transactions/
+ │   ├── insights/
+ ├── layouts/
+ ├── pages/
+ ├── store/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Setup Instructions
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clone repo
+git clone <repo-url>
+
+# Install dependencies
+npm install
+
+# Run project
+npm run dev
 ```
+
+---
+
+## 📈 Evaluation Highlights
+
+* Clean component architecture
+* Scalable state management
+* Responsive design across devices
+* UX-focused interactions and edge cases
+* Real-world dashboard experience
+
+---
+
+## ✨ Future Improvements
+
+* API integration
+* Export to CSV
+* Advanced analytics
+* Authentication system
+
+---
+
+## 👨‍💻 Author
+
+Raj Zite

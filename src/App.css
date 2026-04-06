@@ -490,3 +490,40 @@ aside nav a.active {
     gap: 1rem;
   }
 }
+/* Base input styling */
+.input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: #f9fafb;
+  color: #111827; /* text color in light mode */
+  transition: all 0.2s ease;
+}
+
+/* Hover and focus states */
+.input:hover {
+  background-color: #f3f4f6;
+  border-color: #2563eb;
+}
+.input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+/* Dark theme overrides */
+.dark .input {
+  background-color: #1f2937; /* dark gray background */
+  color: #f9fafb;           /* light text color */
+  border: 1px solid #374151;
+}
+.dark .input:hover {
+  background-color: #111827;
+  border-color: #3b82f6;
+}
+.dark .input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.4);
+}

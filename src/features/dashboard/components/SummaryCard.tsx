@@ -25,13 +25,13 @@ export default function SummaryCards() {
   const balance = income - expenses;
 
   const cards = [
-    { title: "Balance", value: balance, color: "text-indigo-500" },
-    { title: "Income", value: income, color: "text-green-500" },
-    { title: "Expenses", value: expenses, color: "text-red-500" },
+    { title: "Balance", value: balance, color: "balance" },
+    { title: "Income", value: income, color: "income" },
+    { title: "Expenses", value: expenses, color: "expense" },
   ];
 
   return (
-    <div className="grid gap-6 md:grid-cols-3">
+    <div className="summary-grid">
       {cards.map((c, i) => (
         <motion.div
           key={c.title}
@@ -39,7 +39,7 @@ export default function SummaryCards() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: i * 0.1 }}
         >
-          <Card className="stat-card">
+          <Card className="glass-card stat-card hover-lift p-6">
             <p className="stat-title">{c.title}</p>
             <h2 className={`stat-value ${c.color}`}>
               ₹ {c.value.toLocaleString()}
